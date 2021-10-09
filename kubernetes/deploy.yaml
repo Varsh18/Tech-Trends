@@ -10,11 +10,6 @@ spec:
   selector:
     matchLabels:
       app: techtrends
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -25,7 +20,16 @@ spec:
         imagePullPolicy: IfNotPresent
         name: techtrends
         ports:
-        - containerPort: 3111
+          - containerPort: 3111
+            protocol: TCP
+        livenessProbe:
+           httpGet:
+             path: /healthz
+             port: 3111
+        readinessProbe:
+           httpGet:
+             path: /healthz
+             port: 3111
         resources:
           requests:
             memory: "64Mi"
@@ -33,17 +37,3 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        
-        readinessProbe:
-          httpGet:
-            path: /healthz
-            port: 3111
-          initialDelaySeconds: 10
-          periodSeconds: 5
-        
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 3111
-          initialDelaySeconds: 3
-          periodSeconds: 3
