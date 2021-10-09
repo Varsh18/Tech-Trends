@@ -12,3 +12,10 @@ docker logs -f <techtrends-container-id>
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container
+
+
+## Tag the docker image
+docker tag techtrends varsh18/techtrends:v1.0.0
+
+## Push the docker image in dockerhub
+docker push varsh18/techtrends:v1.0.0
