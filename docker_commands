@@ -15,6 +15,29 @@ docker logs -f <techtrends-container-id>
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container
+INFO: 2021-10-09 11:51:57,060 ,  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO: 2021-10-09 11:54:03,435 , 172.17.0.1 - - [09/Oct/2021 11:54:03] "GET / HTTP/1.1" 200 -
+INFO: 2021-10-09 11:54:03,579 , 172.17.0.1 - - [09/Oct/2021 11:54:03] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO: 2021-10-09 11:54:03,648 , 172.17.0.1 - - [09/Oct/2021 11:54:03] "GET /favicon.ico HTTP/1.1" 404 -
+INFO: 2021-10-09 11:54:37,548 , healthz endpoint was reached
+INFO: 2021-10-09 11:54:37,550 , 172.17.0.1 - - [09/Oct/2021 11:54:37] "GET /healthz HTTP/1.1" 200 -
+INFO: 2021-10-09 11:54:44,945 , metrics endpoint was reached
+INFO: 2021-10-09 11:54:44,945 , 172.17.0.1 - - [09/Oct/2021 11:54:44] "GET /metrics HTTP/1.1" 200 -
+INFO: 2021-10-09 11:54:51,574 , Article " 2020 CNCF Annual Report " retrieved
+INFO: 2021-10-09 11:54:51,578 , 172.17.0.1 - - [09/Oct/2021 11:54:51] "GET /1 HTTP/1.1" 200 -
+INFO: 2021-10-09 11:54:53,762 , About page retrieved
+INFO: 2021-10-09 11:54:53,769 , 172.17.0.1 - - [09/Oct/2021 11:54:53] "GET /about HTTP/1.1" 200 -
+INFO: 2021-10-09 11:54:55,240 , 172.17.0.1 - - [09/Oct/2021 11:54:55] "GET /create HTTP/1.1" 200 -
+INFO: 2021-10-09 11:55:12,969 , A new article is created with the title: My first cloud project
+INFO: 2021-10-09 11:55:12,971 , 172.17.0.1 - - [09/Oct/2021 11:55:12] "POST /create HTTP/1.1" 302 -
+INFO: 2021-10-09 11:55:13,027 , 172.17.0.1 - - [09/Oct/2021 11:55:13] "GET / HTTP/1.1" 200 -
+INFO: 2021-10-09 11:55:19,660 , Article " My first cloud project " retrieved
+INFO: 2021-10-09 11:55:19,661 , 172.17.0.1 - - [09/Oct/2021 11:55:19] "GET /7 HTTP/1.1" 200 -
+INFO: 2021-10-09 11:55:24,251 , The post id = 8 does not exist
+INFO: 2021-10-09 11:55:24,254 , 172.17.0.1 - - [09/Oct/2021 11:55:24] "GET /8 HTTP/1.1" 404 -
+INFO: 2021-10-09 11:55:36,149 , metrics endpoint was reached
+INFO: 2021-10-09 11:55:36,149 , 172.17.0.1 - - [09/Oct/2021 11:55:36] "GET /metrics HTTP/1.1" 200 -
+
 
 
 ## Tag the docker image
