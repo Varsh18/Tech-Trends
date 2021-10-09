@@ -6,6 +6,9 @@ docker build -t techtrends .
 # TODO: insert the docker run command
 docker run -d -p 7111:3111 techtrends
 
+## List all running containers
+docker ps
+
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
 docker logs -f <techtrends-container-id>
@@ -16,6 +19,9 @@ docker logs -f <techtrends-container-id>
 
 ## Tag the docker image
 docker tag techtrends varsh18/techtrends:v1.0.0
+
+## Login Docker
+docker login 
 
 ## Push the docker image in dockerhub
 docker push varsh18/techtrends:v1.0.0
