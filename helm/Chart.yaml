@@ -1,0 +1,7 @@
+apiVersion: v1
+name: techtrends
+description: Install a Python HelloWorld deployment
+version: 1.0.0
+maintainers:
+- name: varshini 
+  email: varshiniravi1824@gmail.com
