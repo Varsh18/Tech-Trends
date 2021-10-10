@@ -37,7 +37,7 @@ spec:
         readinessProbe:
           httpGet:
             path: {{.Values.readinessProbe.path}}
-            port: {{.Values.containerPort}}
+            port: {{.Values.readinessProbe.port}}
           initialDelaySeconds: 10
           periodSeconds: 5
 
@@ -45,6 +45,6 @@ spec:
         livenessProbe:
           httpGet:
             path: {{.Values.livenessProbe.path}}
-            port: {{.Values.containerPort}}
+            port: {{.Values.livenessProbe.port}}
           initialDelaySeconds: 10
           periodSeconds: 10
